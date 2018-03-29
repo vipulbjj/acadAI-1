@@ -1,0 +1,35 @@
+{% extends 'login_base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<style type="text/css">
+  a{color: orange;}
+  a:hover {
+    color: red;
+</style>
+  {% if form.non_field_errors %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {% for error in form.non_field_errors %}
+        <p>{% if forloop.last %} class="mb-0"{% endif %}>{{ error }}</p>
+      {% endfor %}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% endif %}
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+      <h2>Log In</h2>
+      <form method="post" novalidate>
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {{ form.username|as_crispy_field }}
+        {{ form.password|as_crispy_field }}
+        <button type="submit" class="btn btn-primary">Log in</button>
+      </form>
+      <br>
+      <a href="{% url 'signup' %}">Create Account</a>
+    </div>
+  </div>
+{% endblock %}
