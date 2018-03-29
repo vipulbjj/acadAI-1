@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db import transaction
 from django.db.models import Count
 from django.shortcuts import get_object_or_404, redirect, render
+from django.template import loader
+from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, ListView, UpdateView
@@ -12,6 +14,14 @@ from ..decorators import student_required
 from ..forms import StudentInterestsForm, StudentSignUpForm, TakeQuizForm
 from ..models import Quiz, Student, TakenQuiz, User
 
+def dashboard(request):
+    template = loader.get_template('classroom/dashboard.html')
+    context = {
+        'company_name': 'AcadAI',
+    }
+    return HttpResponse(template.render(context, request))
+
+        
 
 class StudentSignUpView(CreateView):
     model = User

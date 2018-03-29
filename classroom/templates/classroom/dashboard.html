@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20(5).jpg -->
+  <head>
+    <style>
+    .business-header
+    {
+      background-image:url("{% static 'img/dashboard_images/books2.jpg' %}");
+    }
+    </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Business Frontpage - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/business-frontpage.css' %}" rel="stylesheet">
+    <!-- Font Awesome -->
+
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">acadAI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            {% if user.is_authenticated %}
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{{ user.username }}<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+              </ul>
+            </li>
+            {% endif %}
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header with Background Image -->
+    <header class="business-header" >
+      <div class="container" >
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-3 text-center text-white mt-4"></h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="mt-4">What We Do</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
+          <p>
+            <a class="btn btn-primary btn-lg" href="#">GET HELP &raquo;</a>
+          </p>
+        </div>
+        <!-- <div class="col-sm-4">
+          <h2 class="mt-4">Contact Us</h2>
+          <address>
+            <strong>Start Bootstrap</strong>
+            <br>3481 Melrose Place
+            <br>Beverly Hills, CA 90210
+            <br>
+          </address>
+          <address>
+            <abbr title="Phone">P:</abbr>
+            (123) 456-7890
+            <br>
+            <abbr title="Email">E:</abbr>
+            <a href="mailto:#">name@example.com</a>
+          </address>
+        </div> -->
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+        <div class="col-sm-4 my-4">
+          <div class="card">
+          <a href="#">  <!-- add link here -->
+            <div class="view zoom">
+              <img class="card-img-top" src="{% static 'img/dashboard_images/q2.jpg' %}" alt="" href="www.google.com">
+              <div class="mask flex-center">
+        <p class="white-text"></p>
+    </div>
+</div></a>
+            <div class="card-body">
+              <h4 class="card-title">QUESTION GENERATOR</h4>
+              <p class="card-text">Generate questions from any text.</p>
+            </div>
+            <!-- <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-sm-4 my-4">
+          <div class="card">
+          <a href="#">  <!-- add link here -->
+            <div class="view zoom">
+
+              <img class="card-img-top" src="{% static 'img/dashboard_images/ans.jpg' %}" alt="">
+              <div class="mask flex-center">
+        <p class="white-text"></p>
+    </div>
+</div></a>
+            <div class="card-body">
+              <h4 class="card-title">ANSWER KEY GENERATOR</h4>
+              <p class="card-text">Get answers to all your queries from a given text.</p>
+            </div>
+            <!-- <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-sm-4 my-4">
+          <div class="card">
+          <a href="#">   <!-- add link here -->
+            <div class="view zoom">
+              <img class="card-img-top" src="{% static 'img/dashboard_images/e.jpg' %}" alt="">
+              <div class="mask flex-center">
+        <p class="white-text"></p>
+    </div>
+</div></a>
+            <div class="card-body">
+              <h4 class="card-title">EVALUATOR</h4>
+              <p class="card-text">Evaluate peformance</p>
+            </div>
+            <!-- <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div> -->
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  </body>
+
+</html>
