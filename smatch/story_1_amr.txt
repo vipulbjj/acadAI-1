@@ -1,0 +1,102 @@
+# ::snt Global warming is a major atmospheric issue all over the world.
+# ::tok Global warming is a major atmospheric issue all over the world .
+# ::alignments 10-11|0.0.0 7-8|0.1.0 6-7|0 5-6|0.2 4-5|0.1 1-2|0.0 0-1|0.0.1 ::annotator JAMR dev v0.3 ::date 2018-03-31T15:22:06.423
+(i / issue-02 
+      :ARG0 (w2 / warm-01 
+            :ARG0 (w / world) 
+            :ARG1 (g / globe)) 
+      :ARG1-of (m / major-02 
+            :ARG0 (a / all)) 
+      :mod (a2 / atmosphere))
+
+# ::snt Our earth’s surface becoming hot day by day by trapping the sun’s heat and rise in the level of atmospheric carbon dioxide.
+# ::tok Our earth 's surface becoming hot day by day by trapping the sun 's heat and rise in the level of atmospheric carbon dioxide .
+# ::alignments 23-24|0.3.0.0.0 22-23|0.3.0.0 21-22|0.3.0 19-20|0.3.1 16-17|0.3 15-16|0 14-15|0.2 12-13|0.2.0 10-11|0.0 8-9|0.1.2 6-7|0.1.0.1 5-6|0.1.0 4-5|0.1 3-4|0.1.1 1-2|0.1.0.0.0 0-1|0.1.0.0 ::annotator JAMR dev v0.3 ::date 2018-03-31T15:22:07.124
+(a2 / and 
+      :ARG1-of (t / trap-01) 
+      :op1 (b / become-01 
+            :ARG1 (h2 / hot-05 
+                  :ARG0 (w / we 
+                        :poss-of (e / earth)) 
+                  :ARG1 (d3 / day)) 
+            :ARG2 (s2 / surface) 
+            :time (d2 / day)) 
+      :op2 (h / heat 
+            :mod (s / sun)) 
+      :op3 (r / rise-01 
+            :ARG1 (a / atmosphere 
+                  :mod-of (c / carbon 
+                        :mod-of (d / dioxide))) 
+            :ARG2 (l / level)))
+
+# ::snt Massive deforestation, burning of fossil fuels, industrial emissions, etc. have resulted to an increase in greenhouse gases around earth’s atmosphere.
+# ::tok Massive deforestation , burning of fossil fuels , industrial emissions , etc. have resulted to an increase in greenhouse gases around earth 's atmosphere .
+# ::alignments 23-24|0.0.2.2 21-22|0.0.2.1 20-21|0.0.2 19-20|0.0.2.0 18-19|0.0.1 16-17|0.0 13-14|0 9-10|0.0.0.1.0 8-9|0.0.0.1 6-7|0.0.0 5-6|0.0.0.2 4-5|0.0.0.1.1 3-4|0.0.0.0 1-2|0.0.0.0.1 0-1|0.0.0.0.0 ::annotator JAMR dev v0.3 ::date 2018-03-31T15:22:11.553
+(r / result-01 
+      :ARG1 (i / increase-01 
+            :ARG0 (f / fuel 
+                  :ARG1-of (b / burn-01 
+                        :ARG0 (m / massive) 
+                        :ARG2 (d / deforestation)) 
+                  :mod-of (i2 / industry 
+                        :mod (e2 / emission) 
+                        :mod (o / of)) 
+                  :op1-of (f2 / fossil)) 
+            :ARG1 (g2 / greenhouse) 
+            :op1-of (a2 / around 
+                  :op2 (g / gas) 
+                  :op3 (e / earth) 
+                  :op4 (a / atmosphere))))
+
+# ::snt The greenhouse-gases trap Sun 0rays in the earth’s atmosphere causing the temperature to rise resulting in what is known as global warming.
+# ::tok The greenhouse - gases trap Sun 0rays in the earth 's atmosphere causing the temperature to rise resulting in what is known as global warming .
+# ::alignments 24-25|0.1.0.0.1.0 23-24|0.1.0.0.1 21-22|0.1.0.0 19-20|0.1.0 17-18|0.1 16-17|0.1.1 14-15|0.1.1.0 12-13|0 11-12|0.0 9-10|0.1.0.0.2 6-7|0.1.0.0.0.0.0.0.0 5-6|0.1.0.0.0.0.0.0 4-5|0.1.0.0.0.0.0 3-4|0.1.0.0.0.0 1-2|0.1.0.0.0 ::annotator JAMR dev v0.3 ::date 2018-03-31T15:22:12.471
+(c / cause-01 
+      :ARG0 (a2 / atmosphere) 
+      :ARG1 (r / result-01 
+            :ARG1 (a / amr-unknown 
+                  :manner-of (k / know-02 
+                        :ARG0 (g3 / greenhouse 
+                              :mod-of (g2 / gas 
+                                    :ARG1-of (t2 / trap-01 
+                                          :ARG0 (s / sun 
+                                                :mod-of 0ray)))) 
+                        :ARG1 (g / globe 
+                              :ARG1-of (w / warm-01)) 
+                        :mod (e / earth))) 
+            :ARG1-of (r2 / rise-01 
+                  :ARG2 (t / temperature))))
+
+# ::snt The heat would have otherwise released if the greenhouse-gases were not present in such huge quantity.
+# ::tok The heat would have otherwise released if the greenhouse - gases were not present in such huge quantity .
+# ::alignments 17-18|0.1.3 16-17|0.1.3.1 15-16|0.1.3.0 13-14|0.1 12-13|0.1.2 10-11|0.1.0 8-9|0.1.1 5-6|0 4-5|0.2 1-2|0.0 ::annotator JAMR dev v0.3 ::date 2018-03-31T15:22:12.558
+(r / release-01 
+      :ARG0 (h2 / heat) 
+      :ARG1 (p / present 
+            :domain (g / gas) 
+            :domain (g2 / greenhouse) 
+            :polarity - 
+            :source (q / quantity 
+                  :mod (s / such) 
+                  :mod (h / huge))) 
+      :manner (o / otherwise))
+
+# ::snt 
+# ::tok 
+# ::alignments 0-1|0 ::annotator JAMR dev v0.3 ::date 2018-03-31T15:22:12.573
+# THERE WAS AN EXCEPTION IN THE PARSER.  Returning an empty graph.
+# java.lang.ArrayIndexOutOfBoundsException: 5
+# 	at edu.cmu.lti.nlp.amr.AMRParser$$anonfun$main$3$$anonfun$apply$1.apply$mcV$sp(AMRParser.scala:222)
+# 	at edu.cmu.lti.nlp.amr.AMRParser$$anonfun$main$3$$anonfun$apply$1.apply(AMRParser.scala:213)
+# 	at edu.cmu.lti.nlp.amr.AMRParser$$anonfun$main$3$$anonfun$apply$1.apply(AMRParser.scala:213)
+# 	at edu.cmu.lti.nlp.amr.AMRParser$.time(AMRParser.scala:93)
+# 	at edu.cmu.lti.nlp.amr.AMRParser$$anonfun$main$3.apply(AMRParser.scala:213)
+# 	at edu.cmu.lti.nlp.amr.AMRParser$$anonfun$main$3.apply(AMRParser.scala:211)
+# 	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:772)
+# 	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+# 	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108)
+# 	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:771)
+# 	at edu.cmu.lti.nlp.amr.AMRParser$.main(AMRParser.scala:211)
+# 	at edu.cmu.lti.nlp.amr.AMRParser.main(AMRParser.scala)
+(a / amr-empty)
+
